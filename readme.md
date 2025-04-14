@@ -2,12 +2,13 @@
     Dataset
         TrainDataset
         TestDataset
+        data_enhance.py
     TJNet
         models
             res2net50_v1b_26w_4s-3cf99910.pth -------Backbone network pre-trained model
         net
            Res2Net.py                         
-           TJNet.py
+           DANDY.py
         trainpth                              -------The training process files are saved here
         results                               -------The test files are saved here
         utils                                 -------Some tools
@@ -17,11 +18,12 @@
         Val.py                                -------Get Metrics
         config.ini						      -------Experimental parameter configuration
 # pre-trained model
-Res2Net50: https://shanghuagao.oss-cn-beijing.aliyuncs.com/res2net/res2net50_v1b_26w_4s-3cf99910.pth
+Res2Net50: 通过网盘分享的文件：res2net50_v1b_26w_4s-3cf99910.pth
+链接: https://pan.baidu.com/s/1dsCQ0derqEeutnS2RM7BoQ?pwd=k8wn 提取码: k8wn 
 
-TJNet: https://drive.google.com/file/d/1sxLEPsqOlppmCtJ58VegZ2F1jgYfrRU2/view?usp=sharing
+TJNet: 通过网盘分享的文件：TJNet_best_camo.pth
+链接: https://pan.baidu.com/s/1vbNBKEDqdsXgyCPx6mbRyg?pwd=bp83 提取码: bp83 
 
 # Dataset
-TrainDataset:https://drive.google.com/file/d/1Kifp7I0n9dlWKXXNIbN7kgyokoRY4Yz7/view?usp=sharing
-
-TestDataset:https://drive.google.com/file/d/1SLRB5Wg1Hdy7CQ74s3mTQ3ChhjFRSFdZ/view?usp=sharing
+通过网盘分享的文件：data.zip
+链接: https://pan.baidu.com/s/15zVhCJM9mED1Qq_umN12XQ?pwd=nene 提取码: nene 
