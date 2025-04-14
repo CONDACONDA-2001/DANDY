@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import numpy as np
 from datetime import datetime
 from torchvision.utils import make_grid
-from net.TJNet import Network
+from net.DANDY import Network
 from utils.data_val import get_loader, test_dataset
 from utils.utils import clip_gradient, adjust_lr
 from tensorboardX import SummaryWriter

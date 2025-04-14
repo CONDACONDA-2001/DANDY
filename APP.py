@@ -8,7 +8,7 @@ import torch
 import torch.nn.functional as F
 from PIL import Image
 import configparser
-from net.TJNet import Network
+from net.DANDY import Network
 from torchvision import transforms
 import time
 import os

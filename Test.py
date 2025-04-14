@@ -4,7 +4,7 @@ import numpy as np
 import os
 import argparse
 import cv2
-from net.TJNet import Network
+from net.DANDY import Network
 from utils.data_val import test_dataset
 import configparser
 
