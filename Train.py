@@ -157,6 +157,7 @@ def train(train_loader, model, optimizer, epoch, save_path, writer):
                   '[lateral-3: {:.4f}], [lateral-2: {:.4f}], [lateral-1: {:.4f}], [edge: {:,.4f}], [coarse: {:,.4f}]'.
                   format(datetime.now(), epoch, opt.epoch, i, total_step,
                          loss3.data, loss2.data, loss1.data, losse.data, lossc.data))
+            print(f'bestEpoch:{best_epoch}')
             logging.info('{} Epoch [{:03d}/{:03d}], Step [{:04d}/{:04d}], '
                          '[lateral-3: {:.4f}], [lateral-2: {:.4f}], [lateral-1: {:.4f}], [edge: {:,.4f}], [coarse: {:,.4f}]'.
                          format(datetime.now(), epoch, opt.epoch, i, total_step,
@@ -253,7 +254,7 @@ def val(test_loader, model, epoch, save_path, writer, val_dataset, val_idx):
         print(f'Epoch: {epoch} | MAE: {metrics["MAE"]:.4f} | FM: {metrics["FM"]:.4f} | '
               f'SM: {metrics["SM"]:.4f} | EM: {metrics["EM"]:.4f} | wFM: {metrics["wFM"]:.4f}')
         # 更新全局最佳指标
-        if metrics['MAE'] < best_metrics['MAE'][val_idx] and metrics['FM'] > best_metrics['FM'][val_idx]:
+        if metrics['MAE'] < best_metrics['MAE'][val_idx] and metrics['FM'] > best_metrics['FM'][val_idx] and metrics['SM'] > best_metrics['SM'][val_idx] and metrics['EM'] > best_metrics['EM'][val_idx] and metrics['SM'] > best_metrics['SM'][val_idx] and metrics['wFM'] > best_metrics['wFM'][val_idx]:
             for k in metrics:
                 best_metrics[k][val_idx] = metrics[k]
             best_epoch[val_idx] = epoch
